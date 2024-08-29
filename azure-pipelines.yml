@@ -14,6 +14,8 @@ stages:
     - task: TerraformInstaller@0
       inputs:
         terraformVersion: 'latest'
+      env:
+        ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
 
     - script: |
         terraform --version
